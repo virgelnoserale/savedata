@@ -1,0 +1,21 @@
+*{
+    margin-top:.5rem;
+}
+
+footer {
+    text-align: center;
+    color: red;
+    font-size: smaller;
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    border: 1 solid bisque;
+}
+
+

@@ -6,12 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>View from db</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/mycss.css') }}">
 </head>
 <body>
-    <div class="container-md">
-        <h1>List of registered members</h1>
-    </div>
     <div class="container-md">
         
             <table class="table table-dark table-striped">
@@ -20,30 +16,29 @@
                         <th>ID</th>
                         <th>NAME</th>
                         <th>ADDRESS</th>
+                        <th>ACTION </th>
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($showdata as $showdatas)
+                @foreach($showdata as $showdatas1)
                 <tr>
                     
-                        <td>{{ $showdatas->id }}</td>
-                        <td>{{ $showdatas->name }}</td>
-                        <td>{{ $showdatas->address }}</td>
-                </tr>
+                        <td>{{ $showdatas1->id }}</td>
+                        <td>{{ $showdatas1->name }}</td>
+                        <td>{{ $showdatas1->address }}</td>
+                        <td><button type="submit" name="submit" class="btn btn-warning">Update</button></td>
+
+                        
                     @endforeach
  
             </tbody>
             </table>
-            
+        
+        
     </div>
-
     <div class="container-md">
         <a href="savedata_link" > <button class="btn btn-danger">Back to registration page</button> </a>
-    </div>
-    <div class="container-md">
-        <footer>view only</footer>
-    </div>
 
-   
+    </div>
 </body>
 </html>

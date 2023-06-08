@@ -15,4 +15,27 @@ class ControllerSavdData extends Controller
         return redirect('savedata_link');
 
     }
+
+    function showList() {
+        $showdata=ModelSaveData::all();
+        return view ('show',['showdata'=>$showdata]);
+    } 
+
+    function deleteList() {
+        $showdata=ModelSaveData::all();
+        return view ('deletepage',['showdata'=>$showdata]);
+}
+
+    function delete($id) {
+        $showdata=ModelSaveData::find($id);
+        $showdata->delete();
+        return redirect('deletedata_link');
+    }
+
+
+    function updateList() {
+        $showdata=ModelSaveData::all();
+        return view ('updatepage',['showdata'=>$showdata]);
+    }
+
 }
